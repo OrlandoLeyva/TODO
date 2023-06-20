@@ -107,6 +107,11 @@ header {
   transition: 200ms;
 }
 
+.cross-icon:hover {
+  transform: scale(.90);
+  transition: 100ms;  
+}
+
 .todo-item {
   border-bottom: 1px solid var(--Dark-Grayish-Blue);
 }
