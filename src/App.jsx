@@ -4,7 +4,7 @@ import Todo from "./components/Todo"
 
 function App() {
   const [inputValue, setInputValue] = useState('')
-  const [todoList, setTodoList] = useState(()=> localStorage.getItem('todoList') || [])
+  const [todoList, setTodoList] = useState(()=> JSON.parse(localStorage.getItem('todoList')) || [])
   const [filter, setFilter] = useState('all')
   const [filterButtonSelected, setFilterButtonSelected] = useState(null)
 
@@ -78,6 +78,10 @@ function App() {
       allButtonRef.current.classList.add('button-selected')
     }
   })
+
+  useEffect(()=>{
+    localStorage.setItem('todoList', JSON.stringify(todoList))
+  },[todoList])
   
   return (
     <div className="app-wrapper">
@@ -95,7 +99,7 @@ function App() {
         </div>
 
         <div className="bottom-functionalities todo-items-container">
-          <p>{todoList.length} items</p>
+          <p>{todoListToDisplay.length} items</p>
           <div className="filter-buttons">
             <button ref={allButtonRef} onClick={getALl}>All</button>
             <button onClick={getActive}>Active</button>
