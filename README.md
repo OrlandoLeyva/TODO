@@ -1,4 +1,4 @@
-# Todo app 
+# Todo app
 
 ## Overview
 
@@ -20,7 +20,7 @@ Users should be able to:
 
 Links
 
-- Live Site URL: [TODO App](https://gentle-sunburst-15afe6.netlify.app/)
+- Live Site URL: [TODO App](https://todo-app-orlando.netlify.app/)
 
 ## My process
 
