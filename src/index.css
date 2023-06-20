@@ -103,7 +103,8 @@ header {
 }
 
 .check-container:hover {
-  border-color: linear-gradient( hsl(192, 100%, 67%), hsl(280, 87%, 65%));;
+  border-color: hsl(192, 100%, 67%);
+  transition: 200ms;
 }
 
 .todo-item {
